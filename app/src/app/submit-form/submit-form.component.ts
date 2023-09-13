@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var Swal: any;
 
 @Component({
   selector: 'app-submit-form',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class SubmitFormComponent {
 
+  alert(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: "تم ارسال النموذج بنجاح",
+      text: "رقم التتبع هوا : 3434939",
+
+      showConfirmButton: false,
+      timer: 3000
+    })
+  }
 }
